@@ -9,5 +9,7 @@ export const GameSymbol = ({ symbol }) => {
     return "";
   };
 
-  return <span className={clsx("text-3xl", getSymbolClass(symbol))}>{symbol}</span>;
+  return (
+    <span className={clsx("text-3xl", getSymbolClass(symbol))}>{symbol}</span>
+  );
 };

@@ -6,7 +6,7 @@ export const GameCell = ({ symbol, onClick, isWinner }) => {
     <button
       className={clsx(
         "border border-gray-400 -ml-px -mt-px flex items-center justify-center",
-        isWinner && "bg-green-300"
+        isWinner && "bg-green-300",
       )}
       onClick={onClick}
     >
