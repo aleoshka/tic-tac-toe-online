@@ -1,3 +1,3 @@
-export const TestPage = () => {
+export default function TestPage() {
   return <div>Test page</div>;
-};
+}
