@@ -1,7 +1,12 @@
+import { Inter } from "next/font/google";
 import "../styles/global.css";
 
-export default function App({ Component, pageProps }) {
-  console.log("app");
+const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
-  return <Component {...pageProps} />;
+export default function App({ Component, pageProps }) {
+  return (
+    <div className={inter.className}>
+      <Component {...pageProps} />
+    </div>
+  );
 }
