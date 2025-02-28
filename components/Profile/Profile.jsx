@@ -1,14 +1,14 @@
-import Image from "next/image";
 import clsx from "clsx";
-import DuduIcon from "../../icons/header/dudu.png";
-import BubuIcon from "../../icons/header/bubu.png";
+import Image from "next/image";
+import DuduIcon from "../../icons/dudu.png";
+import BubuIcon from "../../icons/bubu.png";
 
-export const Profile = ({ hover, id }) => {
+export const Profile = ({ className, id }) => {
   return (
     <div
       className={clsx(
-        "w-[180px] flex items-center text-start gap-2 text-teal-600",
-        hover,
+        "flex items-center text-start gap-2 text-teal-600",
+        className,
       )}
     >
       <Image
@@ -17,7 +17,7 @@ export const Profile = ({ hover, id }) => {
         alt="avatar"
       />
       <div>
-        <div>{id === "dudu" ? "Dudu" : "Bubu"}</div>
+        <div className="text-lg">{id === "dudu" ? "Dudu" : "Bubu"}</div>
         <div className="text-slate-400 text-xs">Рейтинг: 1230</div>
       </div>
     </div>
