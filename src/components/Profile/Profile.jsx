@@ -1,9 +1,7 @@
 import clsx from "clsx";
 import Image from "next/image";
-import DuduIcon from "../../icons/dudu.png";
-import BubuIcon from "../../icons/bubu.png";
 
-export const Profile = ({ className, id }) => {
+export const Profile = ({ className, name, rating, avatar }) => {
   return (
     <div
       className={clsx(
@@ -11,14 +9,10 @@ export const Profile = ({ className, id }) => {
         className,
       )}
     >
-      <Image
-        className="size-[48px] rounded-3xl"
-        src={id === "dudu" ? DuduIcon : BubuIcon}
-        alt="avatar"
-      />
-      <div>
-        <div className="text-lg">{id === "dudu" ? "Dudu" : "Bubu"}</div>
-        <div className="text-slate-400 text-xs">Рейтинг: 1230</div>
+      <Image className="size-[48px] rounded-3xl" src={avatar} alt="avatar" />
+      <div className="overflow-hidden">
+        <div className="text-lg truncate">{name}</div>
+        <div className="text-slate-400 text-xs">Рейтинг: {rating}</div>
       </div>
     </div>
   );

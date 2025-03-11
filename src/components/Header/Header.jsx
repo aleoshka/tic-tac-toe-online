@@ -3,6 +3,7 @@ import Logo from "../../icons/logo.png";
 import { Profile } from "..";
 import { ArrowDownIcon } from "../../icons";
 import { Button } from "../../ui";
+import DuduIcon from "../../icons/dudu.png";
 
 export const Header = () => {
   return (
@@ -15,7 +16,7 @@ export const Header = () => {
         </Button>
       </div>
       <button className="flex items-center text-start gap-2 cursor-pointer text-teal-600 hover:text-teal-700">
-        <Profile id="dudu" />
+        <Profile name="Dudu" avatar={DuduIcon} rating="Рейтинг: 1230" />
         <ArrowDownIcon />
       </button>
     </header>

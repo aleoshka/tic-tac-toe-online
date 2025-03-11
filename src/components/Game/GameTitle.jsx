@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowLeftIcon, ClockIcon, StarIcon, UserIcon } from "../../icons";
 
-export const GameTitle = () => {
+export const GameTitle = ({ playersAmount }) => {
   return (
     <div className="pl-2">
       <Link
@@ -15,7 +15,7 @@ export const GameTitle = () => {
       <div className="text-xs text-slate-400 flex gap-3 items-center">
         <StarIcon />
         <div className="flex gap-1 items-center">
-          <UserIcon /> 2
+          <UserIcon /> {playersAmount}
         </div>
         <div className="flex gap-1 items-center">
           <ClockIcon /> 1 мин на ход

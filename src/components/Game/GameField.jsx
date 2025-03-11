@@ -1,30 +1,14 @@
 import clsx from "clsx";
 import { Button } from "../../ui";
-import { useState } from "react";
 import { GameSymbol } from "./GameSymbol";
 
-export const GameField = ({ className }) => {
-  const [{ currentStep, cells }, setGameState] = useState(() => ({
-    currentStep: 0,
-    cells: Array(19 * 19).fill(null),
-  }));
-  const nextStep = (currentStep + 1) % 4;
-
-  const handleClick = (index) => {
-    if (cells[index] !== null) return;
-
-    setGameState((prev) => {
-      const updatedCells = [...prev.cells];
-      updatedCells[index] = currentStep;
-
-      return {
-        ...prev,
-        currentStep: (prev.currentStep + 1) % 4,
-        cells: updatedCells,
-      };
-    });
-  };
-
+export const GameField = ({
+  className,
+  currentStep,
+  nextStep,
+  cells,
+  handleClick,
+}) => {
   return (
     <GameFieldLayout className={className}>
       <GameMoveInfo currentStep={currentStep} nextStep={nextStep} />
